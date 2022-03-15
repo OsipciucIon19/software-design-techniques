@@ -1,5 +1,3 @@
-
-
 class Singleton(object):
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, '_instance'):
@@ -7,9 +5,9 @@ class Singleton(object):
         return cls._instance
 
 
-obj1 = Singleton()
-print(obj1)
+if __name__ == '__main__':
+    obj1 = Singleton()
+    print(obj1)
 
-obj2 = Singleton()
-print(obj2)
-
+    obj2 = Singleton()
+    print(obj2)
