@@ -3,8 +3,7 @@ from abc import ABCMeta, abstractmethod
 
 class AbstractDegree(metaclass=ABCMeta):
     @abstractmethod
-    def info(self):
-        pass
+    def info(self): pass
 
 
 class BE(AbstractDegree):
@@ -37,8 +36,7 @@ class ProfileAbstractFactory(object):
         self.create_profile()
 
     @abstractmethod
-    def create_profile(self):
-        pass
+    def create_profile(self): pass
 
     def add_degree(self, degree):
         self._degrees.append(degree)

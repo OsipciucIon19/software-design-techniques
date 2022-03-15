@@ -3,12 +3,10 @@ from abc import ABCMeta, abstractmethod
 
 class CarFactory(metaclass=ABCMeta):
     @abstractmethod
-    def build_parts(self):
-        pass
+    def build_parts(self): pass
 
     @abstractmethod
-    def build_car(self):
-        pass
+    def build_car(self): pass
 
 
 class SedanCarFactory(CarFactory):
@@ -29,8 +27,7 @@ class SUVCarFactory(CarFactory):
 
 class CarPartsFactory(metaclass=ABCMeta):
     @abstractmethod
-    def build(self):
-        pass
+    def build(self): pass
 
 
 class SedanCarPartsFactory(CarPartsFactory):
@@ -51,8 +48,7 @@ class SUVCarPartsFactory(CarPartsFactory):
 
 class CarAssembleFactory(metaclass=ABCMeta):
     @abstractmethod
-    def assemble(self, parts):
-        pass
+    def assemble(self, parts): pass
 
 
 class SedanCarAssembleFactory(CarAssembleFactory):
