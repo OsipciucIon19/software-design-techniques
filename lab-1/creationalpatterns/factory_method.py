@@ -60,7 +60,7 @@ class EngineerFactory(ProfileAbstractFactory):
 class ProfileCreatorFactory(object):
     @classmethod
     def create_profile(cls, name):
-        return eval(profile_type + 'Factory')()
+        return eval(f'{profile_type}Factory')()
 
 
 if __name__ == '__main__':

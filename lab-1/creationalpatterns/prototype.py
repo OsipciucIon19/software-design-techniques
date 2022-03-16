@@ -7,9 +7,6 @@ class CoursesPrototype(metaclass=ABCMeta):
         self.id = None
         self.type = None
 
-    @abstractmethod
-    def course(self): pass
-
     def get_type(self):
         return self.type
 
@@ -28,26 +25,17 @@ class Python(CoursesPrototype):
         super().__init__()
         self.type = 'Python Basic and Algorithm'
 
-    def course(self):
-        print(' Inside Python :: course() method ')
-
 
 class Java(CoursesPrototype):
     def __init__(self):
         super().__init__()
         self.type = 'Java Basics and Spring Boot'
 
-    def course(self):
-        print(' Inside Python :: course() method. ')
-
 
 class R(CoursesPrototype):
     def __init__(self):
         super().__init__()
         self.type = "R programming language"
-
-    def course(self):
-        print(' Inside Python :: course() method. ')
 
 
 class CoursesCache:
