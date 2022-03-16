@@ -35,7 +35,7 @@ class SedanCarPartsFactory(CarPartsFactory):
         print('Sedan car parts are built')
 
     def __str__(self):
-        return '<Sedan car parts>'
+        return '\'Sedan car parts\''
 
 
 class SUVCarPartsFactory(CarPartsFactory):
@@ -43,7 +43,7 @@ class SUVCarPartsFactory(CarPartsFactory):
         print('SUV Car parts are built')
 
     def __str__(self):
-        return '<SUV car parts>'
+        return '\'SUV car parts\''
 
 
 class CarAssembleFactory(metaclass=ABCMeta):
