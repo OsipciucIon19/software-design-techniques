@@ -56,6 +56,7 @@ class Military(Plane):
     def display_description(self):
         self.carrier.carry_military(self.objects)
 
+
     def add_objects(self, new_objects):
         self.objects += new_objects
 

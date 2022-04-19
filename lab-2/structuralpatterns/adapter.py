@@ -52,6 +52,6 @@ if __name__ == "__main__":
     sm_square_peg_adapter = SquarePegAdapter(sm_square_peg)
     lg_square_peg_adapter = SquarePegAdapter(lg_square_peg)
     print(f"Small peg radius: {sm_square_peg_adapter.get_radius()}")
-    print(f"The large square peg fits the hole? {hole.fits(lg_square_peg_adapter)}")
-    print(f"Large peg radius: {lg_square_peg_adapter.get_radius()}")
     print(f"The small square peg fits the hole? {hole.fits(sm_square_peg_adapter)}")
+    print(f"Large peg radius: {lg_square_peg_adapter.get_radius()}")
+    print(f"The large square peg fits the hole? {hole.fits(lg_square_peg_adapter)}")
