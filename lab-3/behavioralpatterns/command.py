@@ -3,8 +3,7 @@ from abc import ABC, abstractmethod
 
 class BaseCommand(ABC):
     @abstractmethod
-    def execute(self):
-        raise NotImplementedError("Please implement in subclass")
+    def execute(self): pass
 
 
 class EMailCommand(BaseCommand):
