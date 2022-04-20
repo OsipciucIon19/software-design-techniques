@@ -1,6 +1,12 @@
+from abc import ABC, abstractmethod
 
 
-class Memento(object):
+class Memento(ABC):
+    @abstractmethod
+    def get_saved_state(self): pass
+
+
+class ConcreteMemento(Memento, object):
     def __init__(self, state):
         self._state = state
 
@@ -8,7 +14,7 @@ class Memento(object):
         return self._state
 
 
-class Originator(object):
+class Originator:
     _state = ""
 
     def set(self, state):
@@ -17,7 +23,7 @@ class Originator(object):
 
     def save_to_memento(self):
         print("Originator: Saving to Memento.")
-        return Memento(self._state)
+        return ConcreteMemento(self._state)
 
     def restore_from_memento(self, memento):
         self._state = memento.get_saved_state()
