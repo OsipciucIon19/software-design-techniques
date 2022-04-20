@@ -44,6 +44,6 @@ class NotificationInvoker(object):
 if __name__ == "__main__":
     invoker = NotificationInvoker()
     sender = NotificationService()
-    invoker.invoke(EMailCommand(sender, {"subject": "Test Email"}))
-    invoker.invoke(SMSCommand(sender, {"subject": "Test SMS"}))
+    invoker.invoke(EMailCommand(sender, {"subject": "Test Email subject", "body": "test Email body"}))
+    invoker.invoke(SMSCommand(sender, {"message": "Test SMS message"}))
     print(invoker.notification_history)
