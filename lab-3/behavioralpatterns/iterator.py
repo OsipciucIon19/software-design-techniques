@@ -1,3 +1,12 @@
+from abc import ABC, abstractmethod
+
+
+class AbstractIterator(ABC):
+    @abstractmethod
+    def has_next(self): pass
+
+    @abstractmethod
+    def next(self): pass
 
 
 class FoodItem:
@@ -6,7 +15,7 @@ class FoodItem:
         self.price = price
 
     def __str__(self):
-        return f"{self.name}: ${self.price}"
+        return f"{self.name}: {self.price} $"
 
 
 class Menu:
@@ -23,7 +32,7 @@ class Menu:
         return MenuIterator(self.items)
 
 
-class MenuIterator:
+class MenuIterator(AbstractIterator):
     def __init__(self, items):
         self.index = 0
         self.items = items
