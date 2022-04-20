@@ -29,7 +29,7 @@ class MenuIterator:
         self.items = items
 
     def has_next(self):
-        return False if self.index >= len(self.items) else True
+        return True if self.index < len(self.items) else False
 
     def next(self):
         it = self.items[self.index]
