@@ -1,4 +1,4 @@
-### Laboratorul 2. TMPS
+### Laboratorul 3. TMPS
 
 ## Tema: Șabloanele de proiectare comportamentale
 

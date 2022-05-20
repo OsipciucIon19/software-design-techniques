@@ -62,3 +62,5 @@ if __name__ == "__main__":
     while iterator.has_next():
         item = iterator.next()
         print(item)
+
+    iterator.next()

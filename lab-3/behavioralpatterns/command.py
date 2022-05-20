@@ -46,4 +46,4 @@ if __name__ == "__main__":
     sender = NotificationService()
     invoker.invoke(EMailCommand(sender, {"subject": "Test Email subject", "body": "test Email body"}))
     invoker.invoke(SMSCommand(sender, {"message": "Test SMS message"}))
-    print(invoker.notification_history)
+    print(f"Notification history: {invoker.notification_history}")
